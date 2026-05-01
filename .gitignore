@@ -1,1 +1,4 @@
+.DS_Store
+.env
+xhs-auto-poster/
 node_modules/
