@@ -1,0 +1,13 @@
+{
+  "name": "myfacebook",
+  "version": "1.0.0",
+  "description": "个人简历网站 - 科技风",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
