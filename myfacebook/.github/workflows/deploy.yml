@@ -1,0 +1,22 @@
+name: 自动部署到阿里云服务器
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 连接服务器并拉取更新
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 47.120.47.179
+          username: root
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /var/www/html/myfacebook
+            git stash
+            git pull origin main 2>/dev/null || git pull origin master
+            nginx -s reload
