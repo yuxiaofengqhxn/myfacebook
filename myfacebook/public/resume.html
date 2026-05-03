@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郁晓峰 - 商城管理部经理</title>
+  <link rel="stylesheet" href="style.css?v=20260502">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <!-- 入口遮罩 -->
+  <div id="entry-overlay">
+    <div class="entry-content">
+      <div class="entry-avatar">
+        <img src="avatar.jpg?v=20260502" alt="郁晓峰" class="entry-avatar-img">
+      </div>
+      <h1 class="entry-title">郁晓峰</h1>
+      <p class="entry-subtitle">商城管理部经理</p>
+      <button class="entry-btn" onclick="enterSite()">
+        <span>点击进入</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 导航 -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="logo">&lt;郁晓峰 /&gt;</span>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">首页</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">能力</a></li>
+        <li><a href="#project">项目</a></li>
+        <li><a href="#experience">履历</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="avatar-ring">
+        <img src="avatar.jpg" alt="郁晓峰" class="avatar-img">
+      </div>
+      <h1 class="glitch" data-text="郁晓峰">郁晓峰</h1>
+      <p class="hero-subtitle">
+        <span class="typed-text"></span><span class="cursor">|</span>
+      </p>
+      <div class="hero-tags">
+        <span>商城管理部经理</span>
+        <span>运营管理</span>
+        <span>招商策划</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> 联系我</a>
+        <a href="javascript:void(0)" class="btn-outline" onclick="alert('13519745919')"><i class="fas fa-phone"></i> 13519745919</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>向下滚动</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2>关于我</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass">
+        <i class="fas fa-store"></i>
+        <h3>商城运营</h3>
+        <p>20 年商业地产运营管理经验，精通民族特色商城运营体系搭建，擅长提升商场客流与商户经营效益。</p>
+      </div>
+      <div class="about-card glass">
+        <i class="fas fa-handshake"></i>
+        <h3>招商管理</h3>
+        <p>主导西宁大西部商贸城等大型项目的招商工作，积累 300+ 品牌资源，招商成功率 95% 以上。</p>
+      </div>
+      <div class="about-card glass">
+        <i class="fas fa-users"></i>
+        <h3>团队领导</h3>
+        <p>善于搭建高效运营团队，建立标准化管理流程，带领 30+ 人团队保障商城高效运转。</p>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="12">12</span><span class="stat-plus">+</span>
+        <span class="stat-label">运营项目</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="300">300</span><span class="stat-plus">+</span>
+        <span class="stat-label">合作品牌</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="20">20</span><span class="stat-plus">+</span>
+        <span class="stat-label">行业经验(年)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="600">600</span><span class="stat-plus">+</span>
+        <span class="stat-label">商品种类</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="98">98</span><span class="stat-percent">%</span>
+        <span class="stat-label">商铺入驻率</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心能力 -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2>核心能力</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skill-group">
+        <h3><i class="fas fa-chart-line"></i> 运营管理</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">商场运营体系搭建</span>
+          <span class="skill-tag">客流数据分析</span>
+          <span class="skill-tag">销售目标管理</span>
+          <span class="skill-tag">营销活动策划</span>
+          <span class="skill-tag">商户关系维护</span>
+          <span class="skill-tag">服务品质管控</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-file-signature"></i> 招商策划</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">商业定位规划</span>
+          <span class="skill-tag">品牌招商谈判</span>
+          <span class="skill-tag">业态组合优化</span>
+          <span class="skill-tag">民族特色招商</span>
+          <span class="skill-tag">租金策略制定</span>
+          <span class="skill-tag">品牌资源库管理</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3><i class="fas fa-bullseye"></i> 综合管理</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">团队建设与培训</span>
+          <span class="skill-tag">预算编制与控制</span>
+          <span class="skill-tag">跨部门协调</span>
+          <span class="skill-tag">突发事件处理</span>
+          <span class="skill-tag">物业协调管理</span>
+          <span class="skill-tag">数字化运营工具</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 重点项目 - 大西部商贸城 -->
+  <section id="project">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2>重点项目</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="project-hero glass">
+      <div class="project-title-row">
+        <i class="fas fa-landmark"></i>
+        <div>
+          <h3>大西部商贸城</h3>
+          <p class="project-subtitle">青藏高原最大民族商贸城 · 西宁城东区</p>
+        </div>
+      </div>
+      <div class="project-metrics">
+        <div class="metric"><span class="metric-val">78,400</span><span class="metric-unit">m²</span><span class="metric-label">总建筑面积</span></div>
+        <div class="metric"><span class="metric-val">2</span><span class="metric-unit">亿元</span><span class="metric-label">总投资</span></div>
+        <div class="metric"><span class="metric-val">800</span><span class="metric-unit">+</span><span class="metric-label">商铺数量</span></div>
+        <div class="metric"><span class="metric-val">98</span><span class="metric-unit">%</span><span class="metric-label">入驻率</span></div>
+      </div>
+    </div>
+
+    <div class="project-details glass">
+      <h4><i class="fas fa-info-circle"></i> 项目概况</h4>
+      <p>大西部商贸城位于青海省西宁市城东区互助路256号，地处火车站东侧核心商圈，是青藏高原最大的民族特色商贸城。项目占地 32,627 平方米，总建筑面积 78,400 平方米，总投资 2 亿元，建筑为地下一层 + 地上四层结构，配备中心下沉式景观广场、多部电梯及充足货运物流装卸区。</p>
+    </div>
+
+    <div class="project-details glass">
+      <h4><i class="fas fa-cubes"></i> 业态布局</h4>
+      <div class="format-grid">
+        <div class="format-item"><i class="fas fa-tshirt"></i><span>民族服饰</span></div>
+        <div class="format-item"><i class="fas fa-palette"></i><span>民族工艺品</span></div>
+        <div class="format-item"><i class="fas fa-book"></i><span>藏文化书籍</span></div>
+        <div class="format-item"><i class="fas fa-mortar-pestle"></i><span>藏药特产</span></div>
+        <div class="format-item"><i class="fas fa-spa"></i><span>化妆品</span></div>
+        <div class="format-item"><i class="fas fa-tshirt"></i><span>窗帘家纺</span></div>
+        <div class="format-item"><i class="fas fa-tools"></i><span>电动工具</span></div>
+        <div class="format-item"><i class="fas fa-box"></i><span>小商品批发</span></div>
+        <div class="format-item"><i class="fas fa-truck"></i><span>仓储物流</span></div>
+      </div>
+    </div>
+
+    <div class="project-details glass">
+      <h4><i class="fas fa-globe-asia"></i> 辐射范围</h4>
+      <p>采购商来自青海、四川、甘肃、西藏、云南等多个省份，并远至尼泊尔等南亚国家。商户资源覆盖藏、回、汉等多民族，是青藏高原最重要的民族商品集散地之一。</p>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2>工作履历</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item glass">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2021 - 至今</div>
+        <div class="timeline-content">
+          <h3>管理部经理</h3>
+          <h4>西宁大西部商贸城 · 青海嘉星置业有限公司</h4>
+          <p>全面负责大西部商贸城的招商运营管理工作，统筹招商、运营、企划、物业四大板块。主导业态定位与品牌升级，成功引入 60+ 特色民族品牌，商铺入驻率稳定在 98% 以上，年客流持续增长。建立标准化运营管理体系，团队规模 30+ 人。</p>
+        </div>
+      </div>
+      <div class="timeline-item glass">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2015 - 2021</div>
+        <div class="timeline-content">
+          <h3>运营部主管</h3>
+          <h4>某商业地产集团 · 青海</h4>
+          <p>负责 8 万㎡ 商业项目的日常运营，建立标准化运营管理体系。引入 60+ 新品牌，优化业态配比，项目出租率从 75% 提升至 98%，年度销售额同比增长 42%。</p>
+        </div>
+      </div>
+      <div class="timeline-item glass">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2007 - 2015</div>
+        <div class="timeline-content">
+          <h3>运营专员 → 运营主管</h3>
+          <h4>某商业管理公司</h4>
+          <p>从基层运营专员起步，负责商户日常沟通、活动落地执行、现场品质巡检等工作。因业绩突出晋升为主管，开始独立带领团队并参与招商谈判工作，积累了丰富的市场一线经验。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我 -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2>联系我</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-container glass">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <span class="contact-label">电话</span>
+            <span class="contact-value">13519745919</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <span class="contact-label">邮箱</span>
+            <span class="contact-value">yuxiaofengjshm@126.com</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <span class="contact-label">地址</span>
+            <span class="contact-value">青海 · 西宁</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <span class="contact-label">当前职位</span>
+            <span class="contact-value">商城管理部经理</span>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="你的名字" required>
+        <input type="email" placeholder="你的邮箱" required>
+        <textarea rows="4" placeholder="留言内容" required></textarea>
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-paper-plane"></i> 发送消息
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 郁晓峰 · 商城管理部经理 <i class="fas fa-store" style="color: #00c8ff; margin: 0 4px;"></i> 大西部商贸城</p>
+  </footer>
+
+  <!-- 背景音乐 -->
+  <audio id="bgm" loop src="Horizon%20Glow%20-%20Aether%20Echoveil.mp3" preload="none"></audio>
+  <button id="music-btn" class="music-btn">
+    <i class="fas fa-music"></i>
+  </button>
+
+  <script src="script.js?v=20260502"></script>
+</body>
+</html>

@@ -2,21 +2,32 @@ name: 自动部署到阿里云服务器
 
 on:
   push:
-    branches: [master, main]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 连接服务器并拉取更新
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 通过 SSH 连接服务器并部署
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 47.120.47.179
-          username: root
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          host: ${{ secrets.ALIYUN_HOST }}
+          username: ${{ secrets.ALIYUN_USER }}
+          key: ${{ secrets.ALIYUN_SSH_KEY }}
           script: |
-            cd /var/www/html/myfacebook
-            git stash
-            git pull origin main 2>/dev/null || git pull origin master
-            nginx -s reload
+            # 拉取最新代码
+            cd ~/myfacebook
+            git pull origin master
+
+            # 安装依赖并重启应用
+            cd ~/myfacebook/myfacebook
+            npm install --production
+            pm2 restart myfacebook 2>/dev/null || pm2 start server.js --name myfacebook
+
+            # 部署 nginx 配置
+            sudo cp ~/myfacebook/myfacebook/nginx.conf /etc/nginx/sites-enabled/myfacebook
+            sudo nginx -t && sudo nginx -s reload
