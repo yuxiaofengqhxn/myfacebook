@@ -212,9 +212,23 @@ function tryPlayMusic() {
     musicStarted = true
     musicBtn.classList.add('playing')
   }).catch(() => {
-    // 浏览器可能还没准备好，稍后重试
+    // 浏览器阻止了自动播放，用户再次点击时重试
   })
 }
+
+// 页面加载后提前开始缓冲音频（不播放）
+document.addEventListener('DOMContentLoaded', () => {
+  bgm.load()
+})
+
+// 用户首次触摸/点击页面任意位置时尝试播放（兜底，针对移动端）
+const firstTouch = () => {
+  if (!musicStarted) tryPlayMusic()
+  document.removeEventListener('touchstart', firstTouch)
+  document.removeEventListener('click', firstTouch)
+}
+document.addEventListener('touchstart', firstTouch, { once: true })
+document.addEventListener('click', firstTouch, { once: true })
 
 function pauseBgm() {
   bgm.pause()

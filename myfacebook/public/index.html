@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>郁晓峰 - 商城管理部经理</title>
-  <link rel="stylesheet" href="style.css?v=20260502">
+  <link rel="stylesheet" href="style.css?v=20260503">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -12,14 +12,14 @@
   <canvas id="particles"></canvas>
 
   <!-- 入口遮罩 -->
-  <div id="entry-overlay">
+  <div id="entry-overlay" onclick="enterSite()">
     <div class="entry-content">
       <div class="entry-avatar">
         <img src="avatar.jpg?v=20260502" alt="郁晓峰" class="entry-avatar-img">
       </div>
       <h1 class="entry-title">郁晓峰</h1>
       <p class="entry-subtitle">商城管理部经理</p>
-      <button class="entry-btn" onclick="enterSite()">
+      <button class="entry-btn" onclick="event.stopPropagation();enterSite()">
         <span>点击进入</span>
         <i class="fas fa-arrow-right"></i>
       </button>
@@ -303,11 +303,11 @@
   </footer>
 
   <!-- 背景音乐 -->
-  <audio id="bgm" loop src="Horizon%20Glow%20-%20Aether%20Echoveil.mp3" preload="none"></audio>
+  <audio id="bgm" loop playsinline src="Horizon%20Glow%20-%20Aether%20Echoveil.mp3" preload="auto"></audio>
   <button id="music-btn" class="music-btn">
     <i class="fas fa-music"></i>
   </button>
 
-  <script src="script.js?v=20260502"></script>
+  <script src="script.js?v=20260503"></script>
 </body>
 </html>
