@@ -23,11 +23,10 @@ jobs:
             cd ~/myfacebook
             git pull origin master
 
-            # 安装依赖并重启应用
-            cd ~/myfacebook/myfacebook
-            npm install --production
-            pm2 restart myfacebook 2>/dev/null || pm2 start server.js --name myfacebook
+            # 修复权限
+            chmod o+x /root
+            chmod -R o+rX /root/myfacebook
 
-            # 部署 nginx 配置
+            # 部署 nginx 配置并重载
             sudo cp ~/myfacebook/myfacebook/nginx.conf /etc/nginx/sites-enabled/myfacebook
             sudo nginx -t && sudo nginx -s reload
